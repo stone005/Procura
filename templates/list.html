@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block head %}
+	<title>Pratiche</title>
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<h1>{{ title }}</h1>
+		<table class="table table-bordered">
+		  <thead>
+		    <tr>
+		      <th scope="col">Protocollo</th>
+		      <th scope="col">tipologia</th>
+		      <th scope="col">RGNR</th>
+		      <th scope="col">Magistrato</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    {% for obj in object_list %}
+		    <tr>
+		      <td><a href="">{{ obj.PR_prot }}</a></td>
+		      <td>{{ obj.PR_tipologia }}</td>
+		      <td>{{ obj.PR_rgnr }}</td>
+		      <td>{{ obj.PR_magistrato }}</td>
+		    </tr>
+		    {% endfor %}
+		   </tbody>
+		</table>
+	</div> 
+{% endblock %}
